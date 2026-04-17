@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://antoniogonzalezzarza-maker.github.io/oposicions-ibsalut/sitemap.xml

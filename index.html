@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia 07 · Preparació d'Oposicions a les Illes Balears</title>
+<meta name="description" content="Preparació especialitzada per a oposicions locals, CAIB i IB-Salut a les Illes Balears. Material, tests, vídeos i tutories online. Altes taxes d'èxit en les convocatòries 2024 i 2025.">
+<meta name="keywords" content="oposicions Illes Balears, preparació oposicions CAIB, IB-Salut oposicions, oposicions locals Balears, academia oposicions Palma">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Academia 07 · Preparació d'Oposicions a les Illes Balears">
+<meta property="og:description" content="Preparació especialitzada per a oposicions a les Illes Balears. Material actualitzat, tests interactius i acompanyament personalitzat.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0A0F1E;
+  --ink2: #3D4459;
+  --cream: #F7F5F0;
+  --white: #FFFFFF;
+  --accent: #1A6B4A;
+  --accent-l: #E8F4EF;
+  --accent-mid: #2D9E6B;
+  --border: #E2DED6;
+  --r: 12px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+h1, h2, h3, h4 { font-family: 'Syne', sans-serif; line-height: 1.15; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: rgba(247,245,240,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100; padding: 0 32px; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; align-items: center; gap: 8px; }
+.nav-link { font-size: 14px; font-weight: 500; color: var(--ink2); text-decoration: none; padding: 6px 12px; border-radius: 8px; transition: all .15s; }
+.nav-link:hover { color: var(--ink); background: rgba(0,0,0,0.05); }
+.nav-cta { background: var(--accent); color: #fff; padding: 9px 22px; border-radius: 40px; font-size: 14px; font-weight: 500; text-decoration: none; transition: all .2s; }
+.nav-cta:hover { background: #0F4F34; transform: translateY(-1px); }
+.ham { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: transparent; }
+.ham span { display: block; width: 22px; height: 2px; background: var(--ink2); border-radius: 2px; }
+.mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--border); padding: 16px 24px; z-index: 99; flex-direction: column; gap: 4px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu .nav-link { padding: 12px 16px; }
+.mobile-menu .nav-cta { text-align: center; margin-top: 8px; }
+
+/* HERO */
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  padding: 120px 32px 80px; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '07';
+  position: absolute; right: -2%; top: 50%; transform: translateY(-50%);
+  font-family: 'Syne', sans-serif; font-weight: 800;
+  font-size: clamp(180px, 28vw, 380px);
+  color: rgba(26,107,74,0.055); line-height: 1;
+  pointer-events: none; user-select: none;
+}
+.hero-inner { max-width: 860px; margin: 0 auto; width: 100%; }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent-l); color: var(--accent);
+  font-size: 12px; font-weight: 500; padding: 6px 16px; border-radius: 40px;
+  margin-bottom: 28px; letter-spacing: 0.05em; text-transform: uppercase;
+}
+.hero-tag::before {
+  content: ''; width: 6px; height: 6px;
+  background: var(--accent-mid); border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
+.hero h1 { font-size: clamp(38px, 6vw, 76px); font-weight: 800; letter-spacing: -0.035em; margin-bottom: 24px; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero-sub { font-size: clamp(16px, 2vw, 19px); color: var(--ink2); font-weight: 300; max-width: 580px; margin-bottom: 40px; line-height: 1.75; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 56px; }
+.btn-primary {
+  background: var(--accent); color: #fff; padding: 15px 30px; border-radius: 40px;
+  font-size: 15px; font-weight: 500; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px; transition: all .2s;
+}
+.btn-primary:hover { background: #0F4F34; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,107,74,.25); }
+.btn-secondary {
+  background: transparent; color: var(--ink); padding: 15px 30px; border-radius: 40px;
+  font-size: 15px; font-weight: 500; text-decoration: none;
+  border: 1.5px solid var(--border); transition: all .2s;
+}
+.btn-secondary:hover { border-color: var(--ink2); }
+.hero-stats { display: flex; gap: 40px; flex-wrap: wrap; padding-top: 36px; border-top: 1px solid var(--border); }
+.stat-n { font-family: 'Syne', sans-serif; font-size: 30px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+.stat-n span { color: var(--accent); }
+.stat-l { font-size: 13px; color: var(--ink2); margin-top: 5px; line-height: 1.4; }
+
+/* SECTIONS */
+section { padding: 88px 32px; }
+.section-inner { max-width: 920px; margin: 0 auto; }
+.section-label { font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+.section-title { font-size: clamp(28px, 4vw, 46px); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px; }
+.section-sub { font-size: 17px; color: var(--ink2); font-weight: 300; max-width: 560px; line-height: 1.75; margin-bottom: 48px; }
+.bg-white { background: var(--white); }
+.bg-dark { background: var(--ink); color: #fff; }
+.bg-dark .section-title { color: #fff; }
+.bg-dark .section-label { color: #6EE7B7; }
+
+/* OPOSICIONS */
+.oposicions-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.oposicio-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 28px 24px; text-decoration: none; color: var(--ink);
+  display: flex; flex-direction: column; gap: 12px;
+  transition: all .2s; position: relative; overflow: hidden;
+}
+.oposicio-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 28px rgba(26,107,74,.12); }
+.oposicio-card.coming { opacity: .55; pointer-events: none; }
+.oposicio-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px;
+  text-transform: uppercase; letter-spacing: .05em; width: fit-content;
+}
+.oposicio-tag.active { background: var(--accent-l); color: var(--accent); }
+.oposicio-tag.soon { background: #F3F4F6; color: #6B7280; }
+.oposicio-body { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; line-height: 1.25; }
+.oposicio-meta { font-size: 13px; color: var(--ink2); line-height: 1.5; }
+.oposicio-arrow {
+  margin-top: auto; display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 500; color: var(--accent);
+}
+.coming-label {
+  position: absolute; top: 16px; right: 16px;
+  font-size: 11px; font-weight: 600; color: #9CA3AF;
+  background: #F3F4F6; padding: 3px 10px; border-radius: 20px;
+}
+
+/* COM FUNCIONA */
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
+.step { padding: 32px 26px; border-right: 1px solid var(--border); background: var(--white); }
+.step:last-child { border-right: none; }
+.step-num { font-family: 'Syne', sans-serif; font-size: 44px; font-weight: 800; color: var(--accent-l); line-height: 1; margin-bottom: 14px; letter-spacing: -0.04em; }
+.step-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+.step-desc { font-size: 14px; color: var(--ink2); line-height: 1.6; }
+
+/* SOBRE */
+.sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.sobre-text p { font-size: 16px; color: rgba(255,255,255,.7); line-height: 1.8; margin-bottom: 20px; font-weight: 300; }
+.sobre-text p strong { color: #fff; font-weight: 500; }
+.credentials { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; }
+.credential { display: flex; align-items: center; gap: 14px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 10px; padding: 14px 18px; }
+.credential-icon { font-size: 20px; flex-shrink: 0; }
+.credential-text { font-size: 14px; color: rgba(255,255,255,.75); line-height: 1.4; }
+.credential-text strong { color: #fff; display: block; font-weight: 500; margin-bottom: 2px; }
+.quote-box { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: var(--r); padding: 36px; }
+.quote-marks { font-family: 'Syne', sans-serif; font-size: 72px; font-weight: 800; color: var(--accent-mid); line-height: .8; margin-bottom: 16px; opacity: .6; }
+.quote-text { font-size: 18px; color: rgba(255,255,255,.85); line-height: 1.75; font-weight: 300; font-style: italic; margin-bottom: 20px; }
+.quote-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(110,231,183,.1); border: 1px solid rgba(110,231,183,.2); color: #6EE7B7; padding: 6px 14px; border-radius: 40px; font-size: 13px; font-weight: 500; }
+
+/* PREUS */
+.preus-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.preu-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r); padding: 28px 22px; transition: all .2s; }
+.preu-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,107,74,.1); }
+.preu-card.featured { background: var(--ink); border-color: var(--ink); color: #fff; }
+.preu-icon { font-size: 28px; margin-bottom: 14px; }
+.preu-nom { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.preu-desc { font-size: 13px; color: var(--ink2); line-height: 1.6; margin-bottom: 18px; }
+.preu-card.featured .preu-desc { color: rgba(255,255,255,.6); }
+.preu-amount { font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 800; color: var(--accent); letter-spacing: -0.02em; }
+.preu-card.featured .preu-amount { color: #6EE7B7; }
+.preu-amount sup { font-size: 14px; font-weight: 600; }
+.preu-amount small { font-size: 13px; font-weight: 400; opacity: .6; }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; gap: 2px; }
+.faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.faq-q { width: 100%; background: none; border: none; cursor: pointer; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 600; color: var(--ink); text-align: left; transition: background .15s; gap: 16px; }
+.faq-q:hover { background: var(--cream); }
+.faq-icon { width: 26px; height: 26px; border-radius: 50%; background: var(--accent-l); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 400; flex-shrink: 0; transition: transform .2s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { display: none; padding: 0 24px 20px; font-size: 15px; color: var(--ink2); line-height: 1.75; font-weight: 300; }
+.faq-item.open .faq-a { display: block; }
+
+/* CONTACTE */
+.contacte-bg { background: var(--accent); padding: 88px 32px; text-align: center; }
+.contacte-bg h2 { font-size: clamp(28px, 4vw, 50px); color: #fff; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px; }
+.contacte-bg p { font-size: 18px; color: rgba(255,255,255,.8); font-weight: 300; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+.btn-white { background: #fff; color: var(--accent); padding: 16px 36px; border-radius: 40px; font-size: 16px; font-weight: 600; text-decoration: none; display: inline-block; transition: all .2s; }
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,.2); }
+
+/* FOOTER */
+footer { background: var(--ink); padding: 40px 32px; text-align: center; }
+footer p { font-size: 13px; color: rgba(255,255,255,.35); line-height: 1.9; }
+footer a { color: rgba(255,255,255,.5); text-decoration: none; }
+footer a:hover { color: #fff; }
+
+/* RESPONSIVE */
+@media (max-width: 760px) {
+  .nav-links { display: none; }
+  .ham { display: flex; }
+  section { padding: 64px 20px; }
+  .steps-grid { grid-template-columns: 1fr 1fr; }
+  .step { border-bottom: 1px solid var(--border); }
+  .step:nth-child(2n) { border-right: none; }
+  .step:nth-last-child(-n+2) { border-bottom: none; }
+  .sobre-grid { grid-template-columns: 1fr; }
+  .hero-stats { gap: 24px; }
+  nav { padding: 0 20px; }
+}
+@media (max-width: 480px) {
+  .steps-grid { grid-template-columns: 1fr; }
+  .step { border-right: none; border-bottom: 1px solid var(--border); }
+  .step:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Academia <span>07</span></a>
+  <div class="nav-links">
+    <a href="#oposicions" class="nav-link">Oposicions</a>
+    <a href="#com-funciona" class="nav-link">Com funciona</a>
+    <a href="#preus" class="nav-link">Preus</a>
+    <a href="#contacte" class="nav-cta">Contactar</a>
+  </div>
+  <button class="ham" onclick="document.getElementById('mob').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mob">
+  <a href="#oposicions" class="nav-link" onclick="document.getElementById('mob').classList.remove('open')">Oposicions</a>
+  <a href="#com-funciona" class="nav-link" onclick="document.getElementById('mob').classList.remove('open')">Com funciona</a>
+  <a href="#preus" class="nav-link" onclick="document.getElementById('mob').classList.remove('open')">Preus</a>
+  <a href="#contacte" class="nav-cta" onclick="document.getElementById('mob').classList.remove('open')">Contactar</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Illes Balears · Preparació especialitzada</div>
+    <h1>Prepara les teves<br>oposicions amb<br><em>qui les coneix</em></h1>
+    <p class="hero-sub">Material actualitzat, tests interactius i acompanyament personalitzat per a les oposicions locals, de la CAIB i de l'IB-Salut a les Illes Balears.</p>
+    <div class="hero-actions">
+      <a href="#oposicions" class="btn-primary">
+        Veure convocatòries
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#com-funciona" class="btn-secondary">Com funciona</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-n">+<span>50</span></div>
+        <div class="stat-l">alumnes preparats<br>per a grups A1</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n"><span>Alta</span></div>
+        <div class="stat-l">taxa d'èxit en les<br>convocatòries 2024–2025</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n"><span>100%</span></div>
+        <div class="stat-l">material ajustat<br>a la convocatòria vigent</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPOSICIONS -->
+<section class="bg-white" id="oposicions">
+  <div class="section-inner">
+    <div class="section-label">Convocatòries</div>
+    <h2 class="section-title">Oposicions disponibles</h2>
+    <p class="section-sub">Cada convocatòria té el seu propi material, tests i vídeos específics. Selecciona la que t'interessa.</p>
+
+    <div class="oposicions-grid">
+
+      <a href="ibsalut/index.html" class="oposicio-card">
+        <div class="oposicio-tag active">● Activa</div>
+        <div class="oposicio-body">IB-Salut · Grup Tècnic de la Funció Administrativa</div>
+        <div class="oposicio-meta">Subgrup A1 · 846 places · BOIB 30/08/2025<br>Temari complet + tests + vídeos disponibles</div>
+        <div class="oposicio-arrow">
+          Accedir al curs
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <div class="oposicio-card coming">
+        <div class="coming-label">Pròximament</div>
+        <div class="oposicio-tag soon">En preparació</div>
+        <div class="oposicio-body">CAIB · Cos Administratiu</div>
+        <div class="oposicio-meta">Material en elaboració.<br>Contacta per rebre informació quan estigui disponible.</div>
+      </div>
+
+      <div class="oposicio-card coming">
+        <div class="coming-label">Pròximament</div>
+        <div class="oposicio-tag soon">En preparació</div>
+        <div class="oposicio-body">Administracions locals · Illes Balears</div>
+        <div class="oposicio-meta">Material en elaboració.<br>Contacta per rebre informació quan estigui disponible.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COM FUNCIONA -->
+<section id="com-funciona">
+  <div class="section-inner">
+    <div class="section-label">El procés</div>
+    <h2 class="section-title">Com funciona</h2>
+    <p class="section-sub">Sense matrícules complicades ni contractes. Accedeixes al que necessites quan ho necessites.</p>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Tria la convocatòria</div>
+        <div class="step-desc">Selecciona l'oposició que t'interessa i consulta el material disponible i els preus específics.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Accedeix al material</div>
+        <div class="step-desc">Amb el pagament base reps en menys de 24 hores l'accés a tots els temes i tests de la convocatòria.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">Complementa</div>
+        <div class="step-desc">Afegeix vídeos explicatius o tutories grupals per als blocs que necessitin més reforç.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-title">Arriba preparat</div>
+        <div class="step-desc">Amb simulacres finals i sessions de repàs intensiu, arribaràs a l'examen amb els conceptes consolidats.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="bg-dark">
+  <div class="section-inner">
+    <div class="sobre-grid">
+      <div class="sobre-text">
+        <div class="section-label">Qui hi ha darrere</div>
+        <h2 class="section-title">Experiència real<br>des de dins</h2>
+        <p>Academia 07 no és una acadèmia genèrica. El material i l'acompanyament provenen d'un <strong>professional en actiu de l'Administració pública de les Illes Balears</strong>, amb coneixement directe del que es valora realment en els tribunals i dels errors més comuns dels aspirants.</p>
+        <p>Cada tema, cada test i cada sessió de tutoria estan dissenyats des de la <strong>pràctica real</strong>, no des de la teoria abstracta.</p>
+        <div class="credentials">
+          <div class="credential">
+            <div class="credential-icon">🏛️</div>
+            <div class="credential-text">
+              <strong>Tècnic d'Administració General (TAG)</strong>
+              Administració pública de les Illes Balears
+            </div>
+          </div>
+          <div class="credential">
+            <div class="credential-icon">📋</div>
+            <div class="credential-text">
+              <strong>Especialista en dret administratiu</strong>
+              Experiència directa en procediments i contractació pública
+            </div>
+          </div>
+          <div class="credential">
+            <div class="credential-icon">🎓</div>
+            <div class="credential-text">
+              <strong>Preparador d'oposicions A1</strong>
+              Desenes d'alumnes aprovats en les convocatòries 2024 i 2025
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="quote-box">
+          <div class="quote-marks">"</div>
+          <p class="quote-text">No estudies per memoritzar. Estudia per entendre com funciona l'Administració. Quan ho entens, les respostes surten soles.</p>
+          <div class="quote-badge">✓ Metodologia contrastada · 2024 i 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREUS -->
+<section class="bg-white" id="preus">
+  <div class="section-inner">
+    <div class="section-label">Tarifes</div>
+    <h2 class="section-title">Preus clars,<br>sense sorpreses</h2>
+    <p class="section-sub">Cada nivell és independent. Comences pel material base i afegeixes el que necessites.</p>
+
+    <div class="preus-grid">
+      <div class="preu-card">
+        <div class="preu-icon">📚</div>
+        <div class="preu-nom">Material + Tests</div>
+        <div class="preu-desc">Accés il·limitat a tots els temes i tests interactius de la convocatòria triada.</div>
+        <div class="preu-amount"><sup>€</sup>40 <small>accés il·limitat</small></div>
+      </div>
+      <div class="preu-card featured">
+        <div class="preu-icon">🎬</div>
+        <div class="preu-nom">Vídeos per matèria</div>
+        <div class="preu-desc">Paquets de vídeos explicatius per bloc temàtic. L'instructor explica els punts clau i les trampes de l'examen.</div>
+        <div class="preu-amount"><sup>€</sup>25 <small>per paquet</small></div>
+      </div>
+      <div class="preu-card">
+        <div class="preu-icon">👥</div>
+        <div class="preu-nom">Tutoria grupal online</div>
+        <div class="preu-desc">Sessions en grup reduït (màx. 6 persones) per resoldre dubtes i practicar preguntes tipus examen.</div>
+        <div class="preu-amount"><sup>€</sup>25 <small>per sessió</small></div>
+      </div>
+      <div class="preu-card">
+        <div class="preu-icon">🎯</div>
+        <div class="preu-nom">Classe particular</div>
+        <div class="preu-desc">Sessió individual adaptada al teu nivell. Presencial a Palma o online. Ideal per a la recta final.</div>
+        <div class="preu-amount"><sup>€</sup>50 <small>per hora</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">Preguntes freqüents</div>
+    <h2 class="section-title">Tens dubtes?</h2>
+    <p class="section-sub">Les preguntes que ens arriben més sovint.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Per a quines convocatòries hi ha material disponible ara?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Actualment el material complet està disponible per al Grup Tècnic de la Funció Administrativa (A1) de l'IB-Salut, convocatòria publicada al BOIB el 30 d'agost de 2025. Els materials per a la CAIB i les administracions locals estan en elaboració.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Com accedeixo al material un cop pagat?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">En menys de 24 hores des del pagament reps per email les credencials d'accés a la plataforma online. Pots accedir des de qualsevol dispositiu sense límit de temps.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Les tutories són presencials o online?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Les tutories grupals es fan exclusivament online. Les classes particulars es poden fer tant online com presencial a Palma, segons la teva preferència.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Puc comprar els vídeos sense el material base?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Els vídeos estan pensats com a complement del material escrit. Recomanem tenir l'accés base (40€) per treure el màxim profit als vídeos, ja que les explicacions fan referència constant als temes i als tests de la plataforma.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Quan surti una nova convocatòria que m'interessa, com m'assabento?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Escriu-nos per email indicant quines convocatòries t'interessen i t'avisarem quan el material estigui disponible. No et subscrius a res ni reps publicitat.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTE -->
+<section class="contacte-bg" id="contacte">
+  <div class="section-inner">
+    <h2>Comença avui</h2>
+    <p>Escriu-nos sense compromís. T'orientem sobre el millor punt de partida per a la teva situació.</p>
+    <a href="mailto:academia07.oposicions@gmail.com" class="btn-white">
+      Contactar per email
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>
+    © 2025 Academia 07 · Preparació d'oposicions a les Illes Balears<br>
+    <a href="mailto:academia07.oposicions@gmail.com">academia07.oposicions@gmail.com</a>
+  </p>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('nav') && !e.target.closest('.mobile-menu'))
+    document.getElementById('mob').classList.remove('open');
+});
+</script>
+
+</body>
+</html>
